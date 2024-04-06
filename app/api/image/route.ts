@@ -66,13 +66,13 @@ export async function POST(
       scheduler: "K_EULER"
     }
 
-    const response = await replicate.run("stability-ai/stable-diffusion:ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4", { input });
-    console.log(response)
+    const output = await replicate.run("stability-ai/stable-diffusion:ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4", { input });
+    console.log(output)
     if (!isPro) {
       await incrementApiLimit();
     }
 
-    return NextResponse.json(response);
+    return NextResponse.json(output);
   } catch (error) {
     console.log('[IMAGE_ERROR]', error);
     return new NextResponse("Internal Error", { status: 500 });

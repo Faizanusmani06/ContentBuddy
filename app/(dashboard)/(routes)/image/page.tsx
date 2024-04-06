@@ -42,11 +42,10 @@ const PhotoPage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setPhotos([]);
-
       const response = await axios.post('/api/image', values);
-      console.log(response)
-      const urls = response.data.map((image: { url: string }) => image.url);
-
+      console.log("Response:", response)
+      const urls = response.data;
+      console.log("urls", urls)
       setPhotos(urls);
     } catch (error: any) {
       if (error?.response?.status === 403) {
@@ -58,6 +57,8 @@ const PhotoPage = () => {
       router.refresh();
     }
   }
+
+
   return ( 
     <div>
       <Heading
@@ -193,6 +194,8 @@ const PhotoPage = () => {
               Generate
             </Button>
           </form>
+
+
         </Form>
         {isLoading && (
           <div className="p-20">

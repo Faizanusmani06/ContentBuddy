@@ -5,8 +5,8 @@ export const formSchema = z.object({
     message: "Photo prompt is required"
   }),
   num_outputs: z.string().min(1),
-  width: z.string().min(256),
-  height: z.string().min(256)
+  width: z.string(),
+  height: z.string()
 });
 
 export const num_outputsOptions = [

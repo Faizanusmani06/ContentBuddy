@@ -1,12 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+// const nextConfig = {
+//   images: {
+//     domains: [
+//       "googleusercontent.com",
+//       "oaidalleapiprodscus.blob.core.windows.net",
+//       "replicate.delivery"
+//     ]
+//   },
+// }
+
+module.exports = {
   images: {
-    domains: [
-      "googleusercontent.com",
-      "oaidalleapiprodscus.blob.core.windows.net",
-      "cdn.openai.com"
-    ]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'replicate.delivery',
+        port: '',
+        pathname: '/pbxt/**',
+      },
+    ],
   },
 }
-
-module.exports = nextConfig
