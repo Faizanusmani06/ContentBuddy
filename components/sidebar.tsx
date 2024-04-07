@@ -28,7 +28,7 @@ const routes = [
     label: 'Image Generation',
     icon: ImageIcon,
     color: "text-pink-700",
-    href: '/image',
+    href: '/images',
   },
   {
     label: 'Video Generation',
@@ -72,7 +72,7 @@ export const Sidebar = ({
             <Image fill alt="Logo" src="/logo.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
-            AIBundle
+            NEX
           </h1>
         </Link>
         <div className="space-y-1">

@@ -11,7 +11,7 @@ export const Loader = () => {
         />
       </div>
       <p className="text-sm text-muted-foreground">
-        AIBundle is thinking...
+        NEX is thinking...
       </p>
     </div>
   );

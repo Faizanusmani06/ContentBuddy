@@ -9,7 +9,6 @@ import { Download, ImageIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
-
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter } from "@/components/ui/card";
@@ -42,7 +41,7 @@ const PhotoPage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setPhotos([]);
-      const response = await axios.post('/api/image', values);
+      const response = await axios.post('/api/images', values);
       console.log("Response:", response)
       const urls = response.data;
       console.log("urls", urls)
