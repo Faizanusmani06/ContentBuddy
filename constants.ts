@@ -4,28 +4,28 @@ export const MAX_FREE_COUNTS = 10;
 
 export const tools = [
   {
-    label: 'Conversation',
+    label: 'BrainStorm Session',
     icon: MessageSquare,
     href: '/conversation',
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
   },
   {
-    label: 'Music Generation',
+    label: 'Copyright Free Music Generation',
     icon: Music,
     href: '/music',
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
   },
   {
-    label: 'Image Generation',
+    label: 'Copyright Free Image Generation',
     icon: ImageIcon,
     color: "text-pink-700",
     bgColor: "bg-pink-700/10",
     href: '/image',
   },
   {
-    label: 'Video Generation',
+    label: 'Copyright Free Video Generation',
     icon: VideoIcon,
     color: "text-orange-700",
     bgColor: "bg-orange-700/10",
