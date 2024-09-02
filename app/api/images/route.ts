@@ -63,6 +63,7 @@ export async function POST(req: Request) {
     return NextResponse.json(output);
   } catch (error) {
     console.log("[IMAGE_ERROR]", error);
+    window.alert("sometext");
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
