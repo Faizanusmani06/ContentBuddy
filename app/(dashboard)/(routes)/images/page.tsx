@@ -60,6 +60,7 @@ const PhotoPage = () => {
 
   return ( 
     <div>
+      <p className="font-semibold text-red-500 p-5 ">Sorry Feature is unavailable due to insufficient <span className="font-extrabold text-black">Replicate Api</span> credits.</p>
       <Heading
         title="Image Generation"
         description="Turn your prompt into an image."
@@ -203,7 +204,8 @@ const PhotoPage = () => {
         )}
         {photos.length === 0 && !isLoading && (
           <Empty label="No images generated." />
-        )}
+          
+        ) }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
           {photos.map((src) => (
             <Card key={src} className="rounded-lg overflow-hidden">

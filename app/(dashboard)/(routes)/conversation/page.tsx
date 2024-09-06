@@ -63,6 +63,7 @@ const ConversationPage = () => {
 
   return ( 
     <div>
+      <p className="p-8 pt-4 text-red-400 font-extrabold underline "> Powered By Gemini</p>
       <Heading
         title="BrainStorm Session"
         description="Our most advanced conversation model."

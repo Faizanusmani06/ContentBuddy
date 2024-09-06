@@ -54,6 +54,7 @@ const VideoPage = () => {
 
   return ( 
     <div>
+      <p className="font-semibold text-red-500 p-5 ">Sorry Feature is unavailable due to insufficient <span className="font-extrabold text-black">Replicate Api</span> credits.</p>
       <Heading
         title="Video Generation"
         description="Turn your prompt into video."
